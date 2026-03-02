@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1>Expense Tracker</h1>
+  <p>Project by <b>Pervaiz Akram</b></p>
+</header>
+
+<section id="stats-display"></section>
+
+<section class="add-section">
+  <h2>Add Transaction</h2>
+
+  <form id="transaction-form" class="forms">
+
+    <input type="number" id="amount" placeholder="Enter Amount" required>
+
+    <div class="type-selector">
+      <span>Type:</span>
+
+      <label>
+        <input type="radio" name="transactionType" value="credit" checked required>
+        Credit
+      </label>
+
+      <label>
+        <input type="radio" name="transactionType" value="debit" required>
+        Debit
+      </label>
+    </div>
+
+    <label for="category">Category</label>
+    <select id="category" required>
+      <option value="" disabled selected>Select Category</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button type="submit" class="primary-btn">Add Transaction</button>
+
+  </form>
+</section>
+
+<section class="transaction-table">
+
+  <h2>Transactions</h2>
+
+  <table class="transactions">
+
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="transaction-table-body"></tbody>
+
+  </table>
+
+</section>
+
+<script type="module" src="./dist/app.js"></script>
+
+</body>
+</html>
