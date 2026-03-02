@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel Management</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Hostel Management System</h1>
+    </header>
+
+    <main class="container">
+      <div class="section-divider">
+        <h3>Resident Registration</h3>
+        <form id="residentForm" class="input-row">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="number" id="age" placeholder="Age" required />
+          <input type="text" id="phone" placeholder="Phone" required />
+          <select id="roomNumber" required></select>
+          <input type="date" id="checkInDate" required />
+          <button type="submit" class="primary-btn">Add Resident</button>
+        </form>
+      </div>
+
+      <div class="section-divider">
+        <h3>Room Overview</h3>
+        <div id="stats" class="stats-text"></div>
+      </div>
+
+      <div class="section-divider">
+        <h3>Current Residents</h3>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchResident"
+            placeholder="Search by name..."
+          />
+        </div>
+        <table class="resident-table">
+          <thead>
+            <tr>
+              <th>Edit</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Phone</th>
+              <th>Room</th>
+              <th>Check-In</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="residentTableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script type="module" src="./dist/app.js"></script>
+  </body>
+</html>
+<!--
+updated inside hostel service
+UI
+ edit
+ delete
+ search bar(searches resident)
+ dropdown
+ dropdown (see vacant rooms)
+
+expense tracker
+
+add transactions
+balancde
+month balance
+remove txn
+edit txn
+category drop down -- food med transportation etc
+-->
